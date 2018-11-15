@@ -1,0 +1,145 @@
+........................................................
+Java SE - BASICS OF JAVA .. AWT, SWING
+........................................................
+Java EE - Servlets, JSP, EJB, JSF 
+enterprise applicaton / business application. EJB..JSF..Other API
+web application. SERVLETS.. JSP
+DISTIRBUTED APP
+
+//jms : used for otp
+.......................................................
+Java ME - MICRO EDDITION // MOBILE APPS: ANDROID/IOS
+.........................................................................................
+.........................................................................................
+web app? deployed on server.// a collection of web pages.
+web page? single html document
+it's 2types. 1.Static web page 2.dynamic web page
+
+
+.........................
+layered arch:
+view: ui			// html-css--js
+controlr: server		// tom cat
+model: business & service 
+..........................
+servlet is a server side pro language
+tomcat has 2 conatiners..servlet & jsp..
+
+#LIFECYCLE SATGES & METHODS:
+step1: loading servlet
+step2: Instantiate Servlet
+step3: Initialize servlet
+	//inovkes lifecycle method - init()@1
+step4: create request, response objs.//interfaces--|
+step5: invokes service(servlettRequest, servletResponse)@2 lifecycle methd
+step6: sends response back to clinet
+step7: no request processed in server, destroys servlet obj-(destroy()@3)
+@1,2,3 - 3 methods
+
+other methods:
+public String getServletInfo()
+public ServletConfig getServletConfig()
+.................................
+#2 PACKAGES:
+javax.servlet			//SERVLET is an interface here
+javax.servlet.http		//Http servlet & Cookie are class
+//javax.servlet.Servlet		
+
+//SERVLET is an interface here	//GenericServlet-abstract class
+//Http servlet - class ___> extending GeenricServlet .....> implementing Servlet
+//Http servlet providnig body for Generic Servlet
+
+
+http servlet: abtract class
+methods of Http servlet are:
+doGet	doPost	doDelete	doPut	doTrace 	doOptions	doHead
+
+predefined servlets: generic & http
+return type of servlets: void
+................................
+url-pattern name and servlet name shouldn't be same.
+
+RequestDispatcher: include & forward // send ajusting req	//server side	//works within server
+sendRedirect			//new req to the resource	//client side	//also outside of our application
+...........................................
+
+SESSION JOINING TECHNIQUES:
+1. HTTP Session		//server side
+2. Cookie		//client side	//javax.servlet.http
+3. URL Rewriting	//client side	(sample.jsp?emsg="message")
+4. Hidden Form Field	//client side
+...........................................
+ServletContext	//web app.
+
+ServletCongif	//specific servlet
+................................................................................................................
+................................................................................................................
+JSP TAGS
+
+1. SCRIPTLET
+
+	<%  JAVA CODE   %>
+
+2. expression tag
+
+
+	<%=		%>		//out.println()
+
+3.DIRECTIVE TAGS
+
+	<%@		 %>
+
+	3.1 Page directive	//to add java import statemnts 
+	3.2 Taglib directive
+	3.3 Include directive
+
+4. DECLARATIVE TAG
+
+
+	<%!		%>
+
+.........................................
+
+JSP LIFE CYCLES:
+
+1. jspInit()
+2. _jspService()	//no need of overriding
+3. jspDestroy()
+
+JSP STEPS:
+
+1. Translation
+2. Compilation
+3. Loading Servlet
+4. Instantiate
+5. Init
+6. Servlet
+7. Destroy
+
+.........................................
+IMPLICIT OBJECTS
+
+out	request		response	session		application
+page	pageconstant	config		exception	
+......................................................................	
+
+JSP ACTION TAGS:
+
+jsp:include
+jsp:forward
+jsp:useBean
+jsp:setProperty
+jsp:getProperty
+jsp:param
+jsp:plugin
+jsp:fallback	
+
+..............................................................................................................
+
+JPA(JAVA PERSISTENCE API)
+.........................
+
+persistance - data stored permanents in database
+ORM : Object Relantional Mapping
+Hibernate is a ORM tool.
+
